@@ -1,0 +1,96 @@
+body { 
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.header {
+    overflow: hidden;
+    background-color: #666667;
+    padding: 9px 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo on Left */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header a {
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.header a.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Navigation Links on Right */
+.header-right {
+    display: flex;
+    gap: 15px;
+}
+
+.header-right a {
+    margin-left: 10px;
+}
+
+/* Hamburger Icon */
+.icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 500px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f1f1f1;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px;
+    }
+
+    .header-right.active {
+        display: flex;
+    }
+
+    .icon {
+        display: block;
+    }
+}

@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to bottom, #ff9933, #ffffff, #128807); /* Indian Flag Colors */
+}
+
+/* Navbar Styling */
+.navbar {
+  background: #1c1f24; /* Dark Military Green */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border-bottom: 3px solid #ffcc00; /* Golden Accent */
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00; /* Golden */
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo span {
+  margin-left: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  background: #004d00; /* Deep Military Green */
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  background: #ffcc00; /* Golden */
+  color: black;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+  }
+
+  .nav-links a {
+      width: 100%;
+      display: block;
+  }
+}
+
+/* Background Image (Indian Flag) */
+.home-container {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/1920px-Flag_of_India.svg.png") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.content h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* ✅ ALERT POPUP NOTIFICATION */
+.alert-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ffcc00; /* Golden Color */
+  color: #000; /* Black Text */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+/* 🔄 Fade In-Out Animation */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* 📩 Notifications Page Styling */
+.notifications-container {
+  background: #fff;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notifications-container h2 {
+  text-align: center;
+  color: #1c1f24; /* Dark Green */
+}
+
+.notifications-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.notifications-container li {
+  background: #f4f4f4;
+  padding: 10px;
+  margin: 5px 0;
+  border-left: 5px solid #007bff; /* Blue Border */
+  font-weight: bold;
+}
+
+/* 🎛️ Buttons */
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.add-button {
+  background: #008000; /* Green */
+  color: white;
+}
+
+.add-button:hover {
+  background: #ffcc00; /* Golden */
+  color: black;
+}
+
+.remove-button {
+  background: #d9534f; /* Red */
+  color: white;
+}
+
+.remove-button:hover {
+  background: #ffcc00; /* Golden */
+  color: black;
+}
+
+.restore-button {
+  background: #007bff; /* Blue */
+  color: white;
+}
+
+.restore-button:hover {
+  background: #ffcc00; /* Golden */
+  color: black;
+}
+
+.view-alerts-button {
+  background: #ff6600; /* Orange */
+  color: white;
+  margin-left: 10px;
+}
+
+.view-alerts-button:hover {
+  background: #ffcc00; /* Golden */
+  color: black;
+}
